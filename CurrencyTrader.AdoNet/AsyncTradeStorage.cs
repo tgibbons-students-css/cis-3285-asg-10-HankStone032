@@ -5,8 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//author Alexander Hagmann
+//date 11/10/2019
 namespace CurrencyTrader.AdoNet
 {
+    //creates a decorator class that allows Asyncronous processing
     public class AsyncTradeStorage : ITradeStorage
     {
 
