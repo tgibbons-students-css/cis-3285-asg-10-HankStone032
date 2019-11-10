@@ -37,8 +37,8 @@ namespace CurrencyTrader.Gui
             var tradeValidator = new SimpleTradeValidator(logger);
             var tradeMapper = new SimpleTradeMapper();
             var tradeParser = new SimpleTradeParser(tradeValidator, tradeMapper);
-
-            var tradeStorage = new AdoNetTradeStorage(logger);
+            //Changed to ITradeStorage type instead of var for more direct logic
+            ITradeStorage tradeStorage = new AsyncTradeStorage(logger);
             tradeProcessor = new TradeProcessor(tradeDataProvider, tradeParser, tradeStorage);
         }
 
